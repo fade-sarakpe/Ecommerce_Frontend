@@ -13,3 +13,8 @@ export interface ISignUpSection {
 export interface IOTPSection {
   onSwitchView: (newView: string) => void;
 }
+
+export interface ISpinnerProps {
+  size?: 'small' | 'medium' | 'large';
+  className?: string;
+}
