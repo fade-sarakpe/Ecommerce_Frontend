@@ -1,0 +1,1 @@
+export { default as Spinner } from "@/components/ui/Spinner/Spinner";

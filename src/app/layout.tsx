@@ -1,5 +1,4 @@
-import { AOSInit } from "@/components/layout/aos/AOSInit";
-import { Header } from "@/components/layout/Header";
+import { AOSInit, Header } from "@/components/layout";
 import "./globals.css";
 import "./normalize.css";
 

@@ -4,7 +4,6 @@ import styles from '@/sections/login/login.module.css';
 export default function ForgotPasswordSection({ onSwitchView }: IForgotPasswordSection) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Sending password reset email...');
     onSwitchView('otp');
   };
 
