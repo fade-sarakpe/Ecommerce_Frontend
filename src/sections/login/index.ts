@@ -1,3 +1,4 @@
+export { default as LoginFormSection } from './LoginFormSection/LoginFormSection';
 export { default as WavesSection } from './WavesSection/WavesSection';
 export { default as SignInSection } from './SignInSection/SignInSection';
 export { default as SignUpSection } from './SignUpSection/SignUpSection';

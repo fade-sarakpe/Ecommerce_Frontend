@@ -1,0 +1,1 @@
+export { default as AOSInit } from "@/components/layout/aos/AOSInit";
