@@ -1,0 +1,88 @@
+.loginContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wavesSection {
+  position: relative;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.formSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--background-white);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.formWrapper.entering {
+  opacity: 1;
+  transform: translateX(50px);
+}
+
+/* Conditional animation classes for session-based control */
+.wavesSection.sessionAnimate {
+  animation: slideInLeft 1s ease-out;
+}
+
+.formSection.sessionAnimate {
+  animation: slideInRight 1s ease-out 0.3s both;
+}
+
+@media (max-width: 768px) {
+  .loginContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  
+  .wavesSection {
+    min-height: 180px;
+  }
+  
+  .formSection {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formSection {
+    padding: 1rem;
+  }
+}
