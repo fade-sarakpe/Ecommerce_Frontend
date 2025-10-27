@@ -1,4 +1,4 @@
-import { IOTPSection } from '@/app/interfaces/component';
+import { IOTPSection } from '@/interfaces/component';
 import styles from '@/sections/login/login.module.css';
 import { useState } from 'react';
 

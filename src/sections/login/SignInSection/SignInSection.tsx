@@ -1,4 +1,4 @@
-import { ISignInSection } from '@/app/interfaces/component';
+import { ISignInSection } from '@/interfaces/component';
 import styles from '@/sections/login/login.module.css';
 
 export default function SignInSection({ onSwitchView }: ISignInSection) {
