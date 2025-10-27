@@ -1,0 +1,88 @@
+/* Right Section - Actions */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.themeToggle,
+.profileButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.themeToggle:hover,
+.profileButton:hover {
+  background: var(--background-light);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.themeIcon,
+.profileIcon {
+  font-size: 1.2rem;
+}
+
+/* Mobile Menu Toggle Button */
+.mobileMenuToggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileMenuToggle:hover {
+  background: var(--background-light);
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.menuIcon {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rightSection {
+    gap: 0.5rem;
+  }
+
+  .themeToggle,
+  .profileButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .themeIcon,
+  .profileIcon {
+    font-size: 1.1rem;
+  }
+
+  .mobileMenuToggle {
+    display: flex;
+    width: 36px;
+    height: 36px;
+  }
+
+  .menuIcon {
+    font-size: 1.1rem;
+  }
+}

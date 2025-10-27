@@ -1,4 +1,4 @@
-import { ISpinnerProps } from '@/app/interfaces/component';
+import { ISpinnerProps } from '@/interfaces/component';
 import styles from './Spinner.module.css';
 
 
