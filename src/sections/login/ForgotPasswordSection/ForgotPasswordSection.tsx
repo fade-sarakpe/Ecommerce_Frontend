@@ -1,4 +1,4 @@
-import { IForgotPasswordSection } from '@/app/interfaces/component';
+import { IForgotPasswordSection } from '@/interfaces/component';
 import styles from '@/sections/login/login.module.css';
 
 export default function ForgotPasswordSection({ onSwitchView }: IForgotPasswordSection) {
