@@ -1,10 +1,10 @@
 'use client';
 import { categoryFilters, sortOptions, quickCategories } from '@/data/home';
 import { FiSearch, FiFilter, FiX } from 'react-icons/fi';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './SearchSection.module.css';
 
-const SearchSection: React.FC = () => {
+function SearchSection() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilters, setShowFilters] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');

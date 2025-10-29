@@ -1,10 +1,14 @@
-import React from 'react';
-import { FiArrowRight } from 'react-icons/fi';
-import styles from './ProductCategories.module.css';
+'use client';
+import { useInView } from 'react-intersection-observer';
 import { productCategories } from '@/data/home';
+import { FiArrowRight } from 'react-icons/fi';
+import CountUp from 'react-countup';
 import Image from 'next/image';
+import styles from './ProductCategories.module.css';
 
-const ProductCategories: React.FC = () => {
+function ProductCategories(){
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+  const totalProducts = productCategories.reduce((sum, cat) => sum + cat.productCount, 0);
 
   const formatProductCount = (count: number) => {
     if (count >= 1000) {
@@ -67,19 +71,27 @@ const ProductCategories: React.FC = () => {
         </div>
 
         <div className={styles.footer}>
-          <div className={styles.statsContainer}>
+          <div className={styles.statsContainer} ref={ref}>
             <div className={styles.statItem}>
               <span className={styles.statNumber}>
-                {formatProductCount(productCategories.reduce((sum, cat) => sum + cat.productCount, 0))}
+                {inView ? <CountUp 
+                  end={totalProducts} 
+                  duration={2.5} 
+                  formattingFn={(value) => formatProductCount(value)}
+                /> : "0"}
               </span>
               <span className={styles.statLabel}>Total Products</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>{productCategories.length}</span>
+              <span className={styles.statNumber}>
+                {inView ? <CountUp end={productCategories.length} duration={2} /> : "0"}
+              </span>
               <span className={styles.statLabel}>Categories</span>
             </div>
             <div className={styles.statItem}>
-              <span className={styles.statNumber}>50+</span>
+              <span className={styles.statNumber}>
+                {inView ? <CountUp end={50} duration={2.5} /> : "0"}+
+              </span>
               <span className={styles.statLabel}>Brands</span>
             </div>
           </div>

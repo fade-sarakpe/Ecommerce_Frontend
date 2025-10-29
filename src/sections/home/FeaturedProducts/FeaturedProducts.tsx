@@ -1,12 +1,10 @@
 import { FiShoppingCart, FiHeart, FiEye } from 'react-icons/fi';
-import { FaStar } from 'react-icons/fa';
 import { featuredProducts } from '@/data/home';
+import { FaStar } from 'react-icons/fa';
 import Image from 'next/image';
-import React from 'react';
 import styles from './FeaturedProducts.module.css';
 
-const FeaturedProducts: React.FC = () => {
-
+function FeaturedProducts() {
   const renderStars = (rating: number) => {
     const stars = [];
     const fullStars = Math.floor(rating);

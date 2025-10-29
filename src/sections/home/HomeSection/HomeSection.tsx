@@ -1,8 +1,7 @@
-import React from 'react';
 import { HeroSection, SearchSection, FeaturedProducts, ProductCategories } from '@/sections/home';
 import styles from './HomeSection.module.css';
 
-const HomeSection: React.FC = () => {
+function HomeSection() {
   return (
     <main className={styles.homeSection}>
       {/* Hero Section - Main banner with call-to-action */}

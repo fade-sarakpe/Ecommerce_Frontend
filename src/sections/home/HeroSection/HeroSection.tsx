@@ -1,9 +1,12 @@
-import React from 'react';
+'use client';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './HeroSection.module.css';
-import Image from 'next/image';
 
-const HeroSection: React.FC = () => {
+function HeroSection() {
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -40,24 +43,30 @@ const HeroSection: React.FC = () => {
         </div>
         
         {/* Featured Stats */}
-        <div className={styles.stats}>
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>10K+</span>
-            <span className={styles.statLabel}>Happy Customers</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>500+</span>
-            <span className={styles.statLabel}>Products</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>24/7</span>
-            <span className={styles.statLabel}>Support</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.statNumber}>99%</span>
-            <span className={styles.statLabel}>Satisfaction</span>
-          </div>
-        </div>
+         <div className={styles.stats} ref={ref}>
+      <div className={styles.statItem}>
+        <span className={styles.statNumber}>
+          {inView ? <CountUp end={10000} duration={2.5} separator="," /> : '0'}K+
+        </span>
+        <span className={styles.statLabel}>Happy Customers</span>
+      </div>
+      <div className={styles.statItem}>
+        <span className={styles.statNumber}>
+          {inView ? <CountUp end={500} duration={2} /> : '0'}+
+        </span>
+        <span className={styles.statLabel}>Products</span>
+      </div>
+      <div className={styles.statItem}>
+        <span className={styles.statNumber}>24/7</span>
+        <span className={styles.statLabel}>Support</span>
+      </div>
+      <div className={styles.statItem}>
+        <span className={styles.statNumber}>
+          {inView ? <CountUp end={99} duration={2.5} /> : '0'}%
+        </span>
+        <span className={styles.statLabel}>Satisfaction</span>
+      </div>
+    </div>
       </div>
     </section>
   );
