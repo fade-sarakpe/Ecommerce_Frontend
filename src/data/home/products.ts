@@ -1,0 +1,55 @@
+import { IProduct } from '@/interfaces/home';
+
+export const featuredProducts: IProduct[] = [
+  {
+    id: 1,
+    name: "Premium Wireless Headphones",
+    price: 199.99,
+    originalPrice: 249.99,
+    rating: 4.8,
+    reviewCount: 324,
+    image: "/test.jpg",
+  },
+  {
+    id: 2,
+    name: "Smart Fitness Watch",
+    price: 299.99,
+    rating: 4.6,
+    reviewCount: 156,
+    image: "/test.jpg",
+  },
+  {
+    id: 3,
+    name: "Ergonomic Office Chair",
+    price: 449.99,
+    originalPrice: 599.99,
+    rating: 4.9,
+    reviewCount: 89,
+    image: "/test.jpg",
+  },
+  {
+    id: 4,
+    name: "Professional Camera Lens",
+    price: 899.99,
+    rating: 4.7,
+    reviewCount: 67,
+    image: "/test.jpg",
+  },
+  {
+    id: 5,
+    name: "Organic Cotton T-Shirt",
+    price: 29.99,
+    originalPrice: 39.99,
+    rating: 4.3,
+    reviewCount: 234,
+    image: "/test.jpg",
+  },
+  {
+    id: 6,
+    name: "Bluetooth Speaker",
+    price: 79.99,
+    rating: 4.4,
+    reviewCount: 445,
+    image: "/test.jpg",
+  },
+];

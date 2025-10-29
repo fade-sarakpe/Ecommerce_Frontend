@@ -1,7 +1,7 @@
-import LoginPage from "./(pages)/login/page";
+import { HomeSection } from '@/sections/home';
 
 export default function Home() {
   return ( 
-    <LoginPage />
+    <HomeSection />
   );
 }

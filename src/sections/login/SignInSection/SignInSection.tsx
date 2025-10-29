@@ -1,9 +1,13 @@
+"use client";
 import { ISignInSection } from '@/interfaces/component';
 import styles from '@/sections/login/login.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function SignInSection({ onSwitchView }: ISignInSection) {
+  const route = useRouter();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    route.push('/home');
   };
 
   return (

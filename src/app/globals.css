@@ -25,6 +25,11 @@
   --overlay-white-10: rgba(255, 255, 255, 0.1);
   --overlay-black-30: rgba(0, 0, 0, 0.3);
   
+  /* Star Rating Colors */
+  --star-filled: #fbbf24;
+  --star-filled-hover: #f59e0b;
+  --star-empty: #d1d5db;
+  
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
 }
