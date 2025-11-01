@@ -1,6 +1,7 @@
 // Home page component interfaces
 export interface IProduct {
   id: number;
+  slug: string;
   name: string;
   price: number;
   originalPrice?: number;
@@ -11,6 +12,12 @@ export interface IProduct {
   isNew?: boolean;
   isSale?: boolean;
   category?: string;
+  description?: string;
+  features?: string[];
+  specifications?: { [key: string]: string };
+  brand?: string;
+  inStock?: boolean;
+  stockQuantity?: number;
 }
 
 export interface ICategory {

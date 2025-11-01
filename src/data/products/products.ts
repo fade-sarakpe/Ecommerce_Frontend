@@ -5,6 +5,7 @@ export const allProducts: IProduct[] = [
   {
     id: 1,
     name: "Premium Wireless Headphones",
+    slug: "premium-wireless-headphones",
     price: 199.99,
     originalPrice: 249.99,
     rating: 4.8,
@@ -13,39 +14,131 @@ export const allProducts: IProduct[] = [
     badge: "Best Seller",
     isSale: true,
     category: "Electronics",
+    brand: "AudioTech Pro",
+    description: "Experience exceptional sound quality with our premium wireless headphones featuring advanced noise cancellation technology. Perfect for music lovers, professionals, and commuters who demand crystal-clear audio and all-day comfort.",
+    features: [
+      "Active Noise Cancellation (ANC) technology",
+      "40-hour battery life with quick charge",
+      "Premium leather ear cushions for comfort",
+      "Bluetooth 5.3 connectivity",
+      "Built-in microphone for calls",
+      "Foldable design for portability",
+      "Compatible with all devices"
+    ],
+    specifications: {
+      "Driver Size": "40mm dynamic drivers",
+      "Frequency Response": "20Hz - 20kHz",
+      "Battery Life": "40 hours (ANC off), 30 hours (ANC on)",
+      "Charging Time": "2 hours (full charge), 15 min (5 hours playback)",
+      "Weight": "280g",
+      "Connectivity": "Bluetooth 5.3, 3.5mm jack",
+      "Warranty": "2 years"
+    },
+    inStock: true,
+    stockQuantity: 45
   },
   {
     id: 2,
     name: "Smart Fitness Watch",
+    slug: "smart-fitness-watch",
     price: 299.99,
     rating: 4.6,
     reviewCount: 156,
     image: "/test.jpg",
     isNew: true,
     category: "Electronics",
+    brand: "FitTrack",
+    description: "Advanced fitness tracking meets smart technology in this comprehensive health monitoring device. Track your workouts, monitor your health metrics, and stay connected with this feature-rich smartwatch designed for active lifestyles.",
+    features: [
+      "Heart rate and SpO2 monitoring",
+      "GPS tracking for outdoor activities",
+      "50+ workout modes",
+      "Sleep quality analysis",
+      "Water resistant up to 50m",
+      "7-day battery life",
+      "Smart notifications and calls"
+    ],
+    specifications: {
+      "Display": "1.4\" AMOLED touchscreen",
+      "Battery Life": "7 days typical use",
+      "Water Resistance": "5ATM (50 meters)",
+      "Sensors": "Heart rate, SpO2, accelerometer, gyroscope, GPS",
+      "Compatibility": "iOS 12+ and Android 6.0+",
+      "Storage": "4GB internal storage",
+      "Warranty": "1 year"
+    },
+    inStock: true,
+    stockQuantity: 23
   },
   {
     id: 3,
     name: "Professional Camera Lens",
+    slug: "professional-camera-lens",
     price: 899.99,
     rating: 4.7,
     reviewCount: 67,
     image: "/test.jpg",
     category: "Electronics",
+    brand: "OptiMax",
+    description: "Professional-grade telephoto lens designed for serious photographers and videographers. Delivers exceptional image quality with advanced optical stabilization and weather-sealed construction for reliable performance in any condition.",
+    features: [
+      "Advanced optical image stabilization",
+      "Weather-sealed construction",
+      "Ultra-low dispersion glass elements",
+      "Fast and silent autofocus motor",
+      "Professional-grade build quality",
+      "Compatible with full-frame sensors",
+      "Includes lens hood and carrying case"
+    ],
+    specifications: {
+      "Focal Length": "70-200mm",
+      "Maximum Aperture": "f/2.8",
+      "Minimum Focus Distance": "1.2m",
+      "Filter Thread": "77mm",
+      "Weight": "1.48kg",
+      "Mount": "Canon EF/Nikon F",
+      "Warranty": "3 years"
+    },
+    inStock: true,
+    stockQuantity: 8
   },
   {
     id: 4,
     name: "Bluetooth Speaker",
+    slug: "bluetooth-speaker",
     price: 79.99,
     rating: 4.4,
     reviewCount: 445,
     image: "/test.jpg",
     badge: "Popular",
     category: "Electronics",
+    brand: "SoundWave",
+    description: "Portable Bluetooth speaker with powerful 360-degree sound and deep bass. Perfect for outdoor adventures, home entertainment, or office use. Features waterproof design and long-lasting battery for all-day music enjoyment.",
+    features: [
+      "360-degree surround sound",
+      "IPX7 waterproof rating",
+      "24-hour battery life",
+      "Wireless stereo pairing",
+      "Built-in microphone for calls",
+      "Compact and portable design",
+      "Quick charge technology"
+    ],
+    specifications: {
+      "Output Power": "20W RMS",
+      "Battery Life": "24 hours",
+      "Bluetooth Version": "5.0",
+      "Range": "30 meters",
+      "Water Resistance": "IPX7",
+      "Dimensions": "180 x 65 x 65mm",
+      "Weight": "450g"
+    },
+    inStock: true,
+    stockQuantity: 67
   },
   {
     id: 5,
     name: "Gaming Mechanical Keyboard",
+    slug: "gaming-mechanical-keyboard",
     price: 149.99,
     originalPrice: 199.99,
     rating: 4.9,
@@ -53,10 +146,33 @@ export const allProducts: IProduct[] = [
     image: "/test.jpg",
     isSale: true,
     category: "Electronics",
+    brand: "GameForce",
+    description: "Professional gaming mechanical keyboard with customizable RGB lighting and premium tactile switches. Designed for competitive gaming and productivity with anti-ghosting technology and programmable macros.",
+    features: [
+      "Cherry MX Blue mechanical switches",
+      "Customizable RGB backlighting",
+      "Anti-ghosting technology",
+      "Programmable macro keys",
+      "Detachable USB-C cable",
+      "Aluminum frame construction",
+      "Gaming mode with Windows key lock"
+    ],
+    specifications: {
+      "Switch Type": "Cherry MX Blue",
+      "Key Layout": "104-key full size",
+      "Backlighting": "RGB per-key",
+      "Connection": "USB-C to USB-A",
+      "Polling Rate": "1000Hz",
+      "Key Life": "50 million keystrokes",
+      "Dimensions": "440 x 135 x 35mm"
+    },
+    inStock: true,
+    stockQuantity: 34
   },
   {
     id: 6,
     name: "4K Webcam",
+    slug: "4k-webcam",
     price: 129.99,
     rating: 4.5,
     reviewCount: 178,
@@ -67,6 +183,7 @@ export const allProducts: IProduct[] = [
   {
     id: 7,
     name: "Wireless Gaming Mouse",
+    slug: "wireless-gaming-mouse",
     price: 89.99,
     originalPrice: 119.99,
     rating: 4.7,
@@ -78,6 +195,7 @@ export const allProducts: IProduct[] = [
   {
     id: 8,
     name: "USB-C Hub",
+    slug: "usb-c-hub",
     price: 59.99,
     rating: 4.3,
     reviewCount: 145,
@@ -89,6 +207,7 @@ export const allProducts: IProduct[] = [
   {
     id: 9,
     name: "Ergonomic Office Chair",
+    slug: "ergonomic-office-chair",
     price: 449.99,
     originalPrice: 599.99,
     rating: 4.9,
@@ -96,20 +215,66 @@ export const allProducts: IProduct[] = [
     image: "/test.jpg",
     isSale: true,
     category: "Furniture",
+    brand: "ErgoComfort",
+    description: "Premium ergonomic office chair designed for all-day comfort and productivity. Features advanced lumbar support, breathable mesh back, and fully adjustable components to reduce fatigue and improve posture during long work sessions.",
+    features: [
+      "Advanced lumbar support system",
+      "Breathable mesh backrest",
+      "Height-adjustable armrests",
+      "Seat depth adjustment",
+      "360-degree swivel with smooth casters",
+      "Weight capacity up to 300lbs",
+      "10-year warranty on mechanism"
+    ],
+    specifications: {
+      "Seat Height": "16\" - 20\" adjustable",
+      "Seat Width": "20.5\"",
+      "Seat Depth": "18\" - 20\" adjustable",
+      "Backrest Height": "26\"",
+      "Weight Capacity": "300 lbs",
+      "Materials": "Mesh, aluminum, high-grade plastic",
+      "Assembly": "Required (tools included)"
+    },
+    inStock: true,
+    stockQuantity: 12
   },
   {
     id: 10,
     name: "Standing Desk",
+    slug: "standing-desk",
     price: 299.99,
     rating: 4.6,
     reviewCount: 156,
     image: "/test.jpg",
     badge: "Trending",
     category: "Furniture",
+    brand: "FlexiWork",
+    description: "Electric height-adjustable standing desk that promotes healthier work habits. Smooth and quiet motor allows easy transition between sitting and standing positions. Spacious desktop accommodates multiple monitors and accessories.",
+    features: [
+      "Electric height adjustment",
+      "Memory preset positions",
+      "Anti-collision technology",
+      "Cable management system",
+      "Sturdy steel frame",
+      "Scratch-resistant desktop",
+      "Quiet operation under 50dB"
+    ],
+    specifications: {
+      "Height Range": "28\" - 48\"",
+      "Desktop Size": "48\" x 30\"",
+      "Weight Capacity": "220 lbs",
+      "Motor": "Dual motor system",
+      "Speed": "1.5\" per second",
+      "Desktop Material": "Laminated wood",
+      "Frame": "Steel powder-coated"
+    },
+    inStock: true,
+    stockQuantity: 18
   },
   {
     id: 11,
     name: "Modern Bookshelf",
+    slug: "modern-bookshelf",
     price: 189.99,
     rating: 4.4,
     reviewCount: 78,
@@ -119,6 +284,7 @@ export const allProducts: IProduct[] = [
   {
     id: 12,
     name: "Coffee Table",
+    slug: "coffee-table",
     price: 159.99,
     originalPrice: 199.99,
     rating: 4.5,
@@ -132,6 +298,7 @@ export const allProducts: IProduct[] = [
   {
     id: 13,
     name: "Organic Cotton T-Shirt",
+    slug: "organic-cotton-t-shirt",
     price: 29.99,
     originalPrice: 39.99,
     rating: 4.3,
@@ -143,16 +310,40 @@ export const allProducts: IProduct[] = [
   {
     id: 14,
     name: "Denim Jacket",
+    slug: "denim-jacket",
     price: 89.99,
     rating: 4.6,
     reviewCount: 167,
     image: "/test.jpg",
     badge: "Trendy",
     category: "Clothing",
+    brand: "UrbanStyle",
+    description: "Classic denim jacket with a modern fit and vintage-inspired details. Made from premium cotton denim with subtle distressing and comfortable stretch. Perfect for layering and casual everyday wear.",
+    features: [
+      "100% cotton denim construction",
+      "Classic button-front closure",
+      "Chest and side pockets",
+      "Adjustable cuffs",
+      "Vintage-inspired wash",
+      "Comfortable regular fit",
+      "Machine washable"
+    ],
+    specifications: {
+      "Material": "100% Cotton Denim",
+      "Fit": "Regular",
+      "Closure": "Button front",
+      "Pockets": "4 (2 chest, 2 side)",
+      "Care": "Machine wash cold",
+      "Origin": "Made in USA",
+      "Sizes": "XS-XXL"
+    },
+    inStock: true,
+    stockQuantity: 42
   },
   {
     id: 15,
     name: "Running Shoes",
+    slug: "running-shoes",
     price: 119.99,
     originalPrice: 149.99,
     rating: 4.8,
@@ -160,29 +351,98 @@ export const allProducts: IProduct[] = [
     image: "/test.jpg",
     isSale: true,
     category: "Clothing",
+    brand: "SpeedRunner",
+    description: "High-performance running shoes engineered for comfort and speed. Features advanced cushioning technology, breathable mesh upper, and durable rubber outsole for optimal performance on any terrain.",
+    features: [
+      "Advanced cushioning technology",
+      "Breathable mesh upper",
+      "Lightweight design",
+      "Durable rubber outsole",
+      "Reflective details for visibility",
+      "Removable insole",
+      "Lace-up closure"
+    ],
+    specifications: {
+      "Upper Material": "Engineered mesh",
+      "Midsole": "EVA foam with air cushioning",
+      "Outsole": "Rubber with traction pattern",
+      "Weight": "10.2 oz (men's size 9)",
+      "Drop": "10mm heel-to-toe",
+      "Sizes": "US 6-14",
+      "Width": "Regular and Wide available"
+    },
+    inStock: true,
+    stockQuantity: 67
   },
   {
     id: 16,
     name: "Winter Coat",
+    slug: "winter-coat",
     price: 199.99,
     rating: 4.7,
     reviewCount: 89,
     image: "/test.jpg",
     isNew: true,
     category: "Clothing",
+    brand: "WarmGuard",
+    description: "Premium winter coat designed for extreme weather protection. Features waterproof exterior, insulated lining, and adjustable hood. Perfect for outdoor activities and daily winter wear with superior warmth and comfort.",
+    features: [
+      "Waterproof and windproof exterior",
+      "Synthetic down insulation",
+      "Adjustable hood with fur trim",
+      "Multiple zippered pockets",
+      "Adjustable cuffs and hem",
+      "Breathable inner lining",
+      "Reflective safety details"
+    ],
+    specifications: {
+      "Material": "Polyester shell with DWR coating",
+      "Insulation": "Synthetic down fill",
+      "Temperature Rating": "-20°F to 40°F",
+      "Waterproof Rating": "10,000mm",
+      "Breathability": "5,000g/m²/24hr",
+      "Sizes": "XS-XXL",
+      "Care": "Machine wash cold, tumble dry low"
+    },
+    inStock: true,
+    stockQuantity: 23
   },
   {
     id: 17,
     name: "Casual Sneakers",
+    slug: "casual-sneakers",
     price: 79.99,
     rating: 4.4,
     reviewCount: 234,
     image: "/test.jpg",
     category: "Clothing",
+    brand: "ComfortWalk",
+    description: "Versatile casual sneakers perfect for everyday wear. Features comfortable cushioned sole, breathable canvas upper, and classic design that pairs well with any casual outfit. Ideal for walking, light activities, and daily use.",
+    features: [
+      "Canvas upper with leather accents",
+      "Cushioned insole for comfort",
+      "Flexible rubber outsole",
+      "Classic lace-up design",
+      "Padded collar and tongue",
+      "Breathable textile lining",
+      "Durable construction"
+    ],
+    specifications: {
+      "Upper": "Canvas with leather trim",
+      "Sole": "Rubber with grip pattern",
+      "Closure": "Lace-up",
+      "Heel Height": "1 inch",
+      "Sizes": "US 6-13",
+      "Width": "Regular",
+      "Care": "Spot clean with damp cloth"
+    },
+    inStock: true,
+    stockQuantity: 78
   },
   {
     id: 18,
     name: "Wool Sweater",
+    slug: "wool-sweater",
     price: 69.99,
     originalPrice: 89.99,
     rating: 4.6,
@@ -196,6 +456,7 @@ export const allProducts: IProduct[] = [
   {
     id: 19,
     name: "Smart Thermostat",
+    slug: "smart-thermostat",
     price: 249.99,
     rating: 4.8,
     reviewCount: 234,
@@ -207,6 +468,7 @@ export const allProducts: IProduct[] = [
   {
     id: 20,
     name: "Air Purifier",
+    slug: "air-purifier",
     price: 179.99,
     originalPrice: 229.99,
     rating: 4.6,
@@ -218,6 +480,7 @@ export const allProducts: IProduct[] = [
   {
     id: 21,
     name: "Robot Vacuum",
+    slug: "robot-vacuum",
     price: 399.99,
     rating: 4.7,
     reviewCount: 345,
@@ -228,6 +491,7 @@ export const allProducts: IProduct[] = [
   {
     id: 22,
     name: "Garden Tool Set",
+    slug: "garden-tool-set",
     price: 89.99,
     rating: 4.5,
     reviewCount: 123,
@@ -237,6 +501,7 @@ export const allProducts: IProduct[] = [
   {
     id: 23,
     name: "LED Desk Lamp",
+    slug: "led-desk-lamp",
     price: 59.99,
     originalPrice: 79.99,
     rating: 4.4,
@@ -248,6 +513,7 @@ export const allProducts: IProduct[] = [
   {
     id: 24,
     name: "Essential Oil Diffuser",
+    slug: "essential-oil-diffuser",
     price: 49.99,
     rating: 4.3,
     reviewCount: 189,
@@ -260,16 +526,40 @@ export const allProducts: IProduct[] = [
   {
     id: 25,
     name: "Yoga Mat",
+    slug: "yoga-mat",
     price: 39.99,
     rating: 4.6,
     reviewCount: 456,
     image: "/test.jpg",
     badge: "Popular",
     category: "Sports & Outdoors",
+    brand: "ZenFlow",
+    description: "Premium non-slip yoga mat designed for all levels of practice. Made from eco-friendly TPE material with superior grip and cushioning. Perfect for yoga, pilates, meditation, and general fitness exercises.",
+    features: [
+      "Non-slip textured surface",
+      "Eco-friendly TPE material",
+      "6mm thickness for comfort",
+      "Lightweight and portable",
+      "Easy to clean and maintain",
+      "Free carrying strap included",
+      "Odor-resistant material"
+    ],
+    specifications: {
+      "Dimensions": "72\" x 24\" x 6mm",
+      "Weight": "2.2 lbs",
+      "Material": "TPE (Thermoplastic Elastomer)",
+      "Grip": "Non-slip textured surface",
+      "Care": "Wipe clean with damp cloth",
+      "Certification": "SGS certified non-toxic",
+      "Warranty": "1 year"
+    },
+    inStock: true,
+    stockQuantity: 89
   },
   {
     id: 26,
     name: "Camping Tent",
+    slug: "camping-tent",
     price: 199.99,
     originalPrice: 249.99,
     rating: 4.8,
@@ -277,10 +567,33 @@ export const allProducts: IProduct[] = [
     image: "/test.jpg",
     isSale: true,
     category: "Sports & Outdoors",
+    brand: "AdventureGear",
+    description: "Spacious 4-person camping tent with advanced weather protection and easy setup. Features waterproof design, ventilation system, and durable construction for reliable outdoor adventures in any season.",
+    features: [
+      "Waterproof 3000mm coating",
+      "Easy 10-minute setup",
+      "Spacious interior for 4 people",
+      "Dual vestibules for gear storage",
+      "Color-coded poles for easy assembly",
+      "Multiple ventilation windows",
+      "Includes stakes and guy lines"
+    ],
+    specifications: {
+      "Capacity": "4 person",
+      "Floor Area": "60 sq ft",
+      "Peak Height": "6 feet",
+      "Packed Size": "24\" x 8\" x 8\"",
+      "Weight": "12 lbs",
+      "Waterproof Rating": "3000mm",
+      "Season": "3-season"
+    },
+    inStock: true,
+    stockQuantity: 15
   },
   {
     id: 27,
     name: "Water Bottle",
+    slug: "water-bottle",
     price: 24.99,
     rating: 4.4,
     reviewCount: 567,
@@ -290,6 +603,7 @@ export const allProducts: IProduct[] = [
   {
     id: 28,
     name: "Resistance Bands Set",
+    slug: "resistance-bands-set",
     price: 34.99,
     originalPrice: 49.99,
     rating: 4.5,
@@ -303,6 +617,7 @@ export const allProducts: IProduct[] = [
   {
     id: 29,
     name: "JavaScript Programming Guide",
+    slug: "javascript-programming-guide",
     price: 49.99,
     rating: 4.7,
     reviewCount: 189,
@@ -313,6 +628,7 @@ export const allProducts: IProduct[] = [
   {
     id: 30,
     name: "Design Thinking Book",
+    slug: "design-thinking-book",
     price: 34.99,
     originalPrice: 44.99,
     rating: 4.6,

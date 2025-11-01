@@ -1,11 +1,15 @@
+'use client';
+
 import { FiShoppingCart, FiHeart, FiEye } from 'react-icons/fi';
 import { featuredProducts } from '@/data/home';
 import { FaStar } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './FeaturedProducts.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function FeaturedProducts() {
+  const router = useRouter();
   const renderStars = (rating: number) => {
     const stars = [];
     const fullStars = Math.floor(rating);
@@ -64,7 +68,7 @@ function FeaturedProducts() {
                   height={200}
                 />
                 <div className={styles.imageOverlay}>
-                  <button className={styles.actionButton}>
+                  <button className={styles.actionButton} onClick={() => router.push(`/product/${product.slug}`)}>
                     <FiEye />
                   </button>
                   <button className={styles.actionButton}>
@@ -78,8 +82,10 @@ function FeaturedProducts() {
 
               {/* Product Info */}
               <div className={styles.productInfo}>
-                <h3 className={styles.productName}>{product.name}</h3>
-                
+                <Link href={`/product/${product.slug}`}>
+                  <h3 className={styles.productName}>{product.name}</h3>
+                </Link>
+
                 <div className={styles.rating}>
                   <div className={styles.stars}>
                     {renderStars(product.rating)}

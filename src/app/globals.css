@@ -30,6 +30,20 @@
   --star-filled-hover: #f59e0b;
   --star-empty: #d1d5db;
   
+  /* Status Colors */
+  --success-bg: #d4edda;
+  --success-text: #155724;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  
+  /* Additional UI Colors */
+  --gray-light: #f8f9fa;
+  --gray-medium: #e9ecef;
+  --gray-border: #dee2e6;
+  --gray-text: #495057;
+  --primary-hover: #0056b3;
+  
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
 }

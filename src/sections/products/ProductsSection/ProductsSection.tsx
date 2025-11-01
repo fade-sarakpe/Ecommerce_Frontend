@@ -6,8 +6,11 @@ import { FiHeart, FiShoppingCart, FiEye } from 'react-icons/fi';
 import { FaStar } from 'react-icons/fa';
 import styles from './ProductsSection.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function ProductsSection() {
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [filters, setFilters] = useState({
     category: 'all',
@@ -170,7 +173,7 @@ function ProductsSection() {
 
                     {/* Action Buttons */}
                     <div className={styles.productActions}>
-                      <button className={styles.actionButton} title="Quick View">
+                      <button className={styles.actionButton} onClick={() => router.push(`/product/${product.slug}`)} title="Quick View">
                         <FiEye />
                       </button>
                       <button className={styles.actionButton} title="Add to Wishlist">
@@ -184,7 +187,9 @@ function ProductsSection() {
 
                   {/* Product Info */}
                   <div className={styles.productInfo}>
-                    <h3 className={styles.productName}>{product.name}</h3>
+                    <Link href={`/product/${product.slug}`}>
+                      <h3 className={styles.productName}>{product.name}</h3>
+                    </Link>
                     
                     {/* Rating */}
                     <div className={styles.productRating}>

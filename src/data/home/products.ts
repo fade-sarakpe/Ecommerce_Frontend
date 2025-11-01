@@ -9,6 +9,7 @@ export const featuredProducts: IProduct[] = [
     rating: 4.8,
     reviewCount: 324,
     image: "/test.jpg",
+    slug: "premium-wireless-headphones",  
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ export const featuredProducts: IProduct[] = [
     rating: 4.6,
     reviewCount: 156,
     image: "/test.jpg",
+    slug: "smart-fitness-watch",  
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export const featuredProducts: IProduct[] = [
     rating: 4.9,
     reviewCount: 89,
     image: "/test.jpg",
+    slug: "ergonomic-office-chair",  
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const featuredProducts: IProduct[] = [
     rating: 4.7,
     reviewCount: 67,
     image: "/test.jpg",
+    slug: "professional-camera-lens",  
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const featuredProducts: IProduct[] = [
     rating: 4.3,
     reviewCount: 234,
     image: "/test.jpg",
+    slug: "organic-cotton-t-shirt",  
   },
   {
     id: 6,
@@ -51,5 +56,6 @@ export const featuredProducts: IProduct[] = [
     rating: 4.4,
     reviewCount: 445,
     image: "/test.jpg",
+    slug: "bluetooth-speaker",  
   },
 ];
