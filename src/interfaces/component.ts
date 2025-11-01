@@ -60,3 +60,14 @@ export interface ISpinnerProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
 }
+
+export interface ISearchSectionProps {
+  onSearch?: (query: string) => void;
+  onFilterChange?: (filters: {
+    category: string;
+    priceRange: string;
+    sortBy: string;
+  }) => void;
+  showQuickCategories?: boolean;
+  className?: string;
+}

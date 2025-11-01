@@ -1,4 +1,5 @@
-import { HeroSection, SearchSection, FeaturedProducts, ProductCategories } from '@/sections/home';
+import { HeroSection, FeaturedProducts, ProductCategories } from '@/sections/home';
+import { SearchSection } from '@/components/ui';
 import styles from './HomeSection.module.css';
 
 function HomeSection() {

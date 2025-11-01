@@ -10,6 +10,7 @@ export interface IProduct {
   badge?: string;
   isNew?: boolean;
   isSale?: boolean;
+  category?: string;
 }
 
 export interface ICategory {

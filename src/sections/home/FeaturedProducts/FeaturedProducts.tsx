@@ -3,6 +3,7 @@ import { featuredProducts } from '@/data/home';
 import { FaStar } from 'react-icons/fa';
 import Image from 'next/image';
 import styles from './FeaturedProducts.module.css';
+import Link from 'next/link';
 
 function FeaturedProducts() {
   const renderStars = (rating: number) => {
@@ -113,9 +114,9 @@ function FeaturedProducts() {
         </div>
 
         <div className={styles.footer}>
-          <button className={styles.viewAllButton}>
+          <Link href="/products" className={styles.viewAllButton}>
             View All Products
-          </button>
+          </Link>
         </div>
       </div>
     </section>
